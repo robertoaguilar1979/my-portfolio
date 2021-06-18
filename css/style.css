@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+
+    /* color theme */
+    --teal: #16E0BD;
+    --dark-green: #1C4B43;
+    --white: #FFFFFF;
+
+    --black: #000000;
+    --grey: #303030;
+
+    /*   font  size  */
+    --h1: 4.5rem;
+    --h2: 3.75rem;
+    --h3: 2.36rem;
+    --h4: 1.5rem;
+    --p: 1.125rem;
+    --bnt: 1rem;
+    --fontAwesome: 1.5rem;
+    --email: 1.5rem;
+
+}
+
+body {
+    font-size: ;
+}
