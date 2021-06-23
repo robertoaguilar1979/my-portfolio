@@ -71,6 +71,8 @@ img {
     max-width: 100%;
 }
 
+
+
 /*================= header area ==================*/
 .nav-bar {
     padding: 1em 1.5em;
@@ -98,7 +100,6 @@ img {
 .nav-bar {
     display: flex;
     justify-content: space-between;
-    /* min-width: 397px; */
 }
 
 .logo-link {
@@ -120,15 +121,19 @@ img {
     margin-right: 6em;
     font-size: 1.2rem;
     color: var(--grey);
-    color: inherit;
-    font-family: inherit;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.nav-list {
+    padding: 1.5em;
 }
 
 .nav a {
     text-decoration: none;
-    padding: 1.5em;
-    color: inherit;
-    font-family: inherit;
+    color: var(--grey);
+    font-weight: 700;
+    font-family: 'Source Sans Pro', sans-serif;
+    letter-spacing: 2px;
 
 }
 
@@ -136,19 +141,124 @@ img {
     display: none;
 }
 
+.nav-close {
+    display: none;
+}
+
+.nav-open {
+    display: none;
+}
+
+
+
+.current {
+    border-bottom: solid 2.5px var(--teal);
+    padding-bottom: .2em;
+}
+
 @media (max-width:945px) {
+
     .burger {
         display: block;
         color: var(--grey);
-        font-size: 2rem;
         margin-right: 1.5em;
         font-size: 2.3rem;
     }
 
-    .nav-ul {
-        display: none;
+    .nav-open {
+        background: transparent;
+        border: none;
+        margin-left: auto;
+        cursor: pointer;
+        display: block;
     }
 
+    .nav-close {
+        display: block;
+        background: transparent;
+        color: var(--white);
+        border: none;
+        font-size: 3.5rem;
+        right: 30px;
+        top: 7px;
+        position: absolute;
+        cursor: pointer;
+    }
+
+    .nav-ul {
+        display: flex;
+        flex-direction: column;
+        color: var(--white);
+        padding: 0;
+        margin: 0;
+
+    }
+
+    .nav-ul li a {
+        color: var(--white);
+    }
+
+    .nav-ul li {
+        padding: 5em;
+        font-size: 1.5rem;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: column;
+        color: var(--white);
+    }
+
+    .mobile-nav {
+        background: var(--black);
+        z-index: 10;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        position: fixed;
+        color: var(--white);
+        transition: all 450ms ease-in-out;
+
+    }
+
+    .open {
+        left: 0;
+    }
+
+    .mobile-na .nav-close {
+        color: var(--white);
+    }
+}
+
+@media (max-width:500px) {
+    .burger {
+        margin-right: .3em;
+        font-size: 2rem;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .dev {
+        font-size: .60rem;
+    }
+
+    .hero-section {
+        padding: 2em;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    .nav-bar {
+        padding: 1em
+    }
 }
 
 /*================== hero section ====================*/
@@ -209,11 +319,13 @@ section {
     z-index: 1;
     border-radius: 50%;
     box-shadow: 10px 10px 25px rgba(0, 0, 0, .3);
+    max-width: 100%;
 }
 
 @media (max-width:945px) {
     .hero-section {
         margin-top: 1em;
+        margin-bottom: 1.5em;
     }
 
     .hero {
@@ -265,8 +377,114 @@ section {
         display: block;
         object-fit: cover;
         max-width: 100%;
-        margin-top: 1.75em;
+        margin-top: 2em;
 
 
     }
 }
+
+/*============= My Experience =================*/
+
+.my-experience {
+    background: url(../img/laptop.jpg);
+    background-size: cover;
+    background-position: center bottom;
+    background-color: var(--grey);
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    color: var(--white);
+    padding: 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.my-experience h1 {
+    color: var(--teal);
+}
+
+.experience-area {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8em;
+    margin-top: 2em;
+}
+
+.experience-area h4 {
+    color: var(--white);
+}
+
+.experience-area li {
+    color: rgba(255, 255, 255, 0.8);
+    list-style: none;
+    text-align: center;
+    font-size: var(--p);
+    padding: .25em;
+
+}
+
+.experience-area h4 {
+    background-color: var(--dark-green);
+    text-align: center;
+}
+
+.experience-area i {
+    font-size: 4rem;
+    text-align: center;
+    display: block;
+    margin-bottom: .5em;
+}
+
+li .li-fab {
+    font-size: 1rem;
+    display: inline;
+}
+
+.column ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin-top: 1em;
+}
+
+.h1-experience::after {
+    content: "";
+    display: block;
+    width: 400px;
+    height: 2px;
+    background: linear-gradient(to right, var(--dark-green), var(--teal), var(--dark-green));
+    margin: 0 auto;
+}
+
+@media (max-width:945px) {
+    .my-experience {
+        padding: .50em;
+        margin-top: 1.5em;
+    }
+
+    .experience-area {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3em;
+        margin-bottom: 1.75em;
+    }
+
+    .h1-experience {
+        text-align: center;
+    }
+
+    .h1-experience::after {
+        content: "";
+        display: block;
+        width: 300px;
+        height: 2px;
+        background: linear-gradient(to right, var(--dark-green), var(--teal), var(--dark-green));
+        margin: 0 auto;
+        margin-bottom: .75em;
+    }
+}
+
+/* who am I */

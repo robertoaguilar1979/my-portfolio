@@ -18,19 +18,21 @@
                     <p class="dev"> web developer </p>
                 </a>
             </div>
-            <nav class="nav">
-                <i class="fas fa-bars burger"></i>
+            <button class="nav-open"><i class="fas fa-bars burger"></i></button>
+
+            <nav class="nav mobile-nav">
+                <button class="nav-close">&times;</button>
                 <ul class="nav-ul">
-                    <li class="nav-list"><a href="index.html" class="nav-item">Home</a></li>
+                    <li class="nav-list"><a href="index.html" class="nav-item current">Home</a></li>
                     <li class="nav-list"><a href="#about" class="nav-item">About</a></li>
-                    <li class="nav-list"><a href="contact" class="nav-item">Contact</a></li>
+                    <li class="nav-list"><a href="#contact" class="nav-item">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <section class="hero-section">
         <div class="hero">
-            <img src="img/ocean.jpg" alt="" class="hero-img">
+            <img src="img/ocean2.jpg" alt="ocean picture" class="hero-img">
             <h1 class="hi">Hi, I'm </h1>
             <h1 class="name">Robert Aguilar</h1>
             <div class="color-background">
@@ -38,5 +40,44 @@
             </div>
         </div>
     </section>
+    <section class="my-experience">
+        <h1 class="h1-experience">My Experience</h1>
+        <div class="experience-area">
+            <div class="column">
+                <i class="fas fa-code"></i>
+                <h4>Front-End</h4>
+                <ul>
+                    <li>html</li>
+                    <li>css</li>
+                    <li>javascript</li>
+                </ul>
+            </div>
+            <div class="column">
+                <i class="fas fa-terminal"></i>                
+                 <h4>Tools I Use</h4>
+                <ul>
+                    <li>vs code</li>
+                    <li>photoshop</li>
+                    <li>ssh</li>
+                    <li>wsl(windows subsystem linux)<i class="fab fa-linux li-fab"></i></li>
+                    <li>linux terminal</li>
+                    <li>github</li>
+                </ul>
+            </div>
+            <div class="column">
+                <i class="far fa-keyboard"></i>
+                <h4>Tools I'm learning</h4>
+                <ul>
+                    <li>node</li>
+                    <li>react</li>
+                    <li>figma</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="who-am-i">
+
+    </section>
+    <script src="js/index.js"></script>
 </body>
 </html>
