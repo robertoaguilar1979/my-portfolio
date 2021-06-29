@@ -513,7 +513,7 @@ li .li-fab {
 
 .karenAndMe {
     position: absolute;
-    bottom: 240px;
+    top: 70px;
     left: 570px;
     box-shadow: 10px 10px 25px rgba(0, 0, 0, .6);
 
