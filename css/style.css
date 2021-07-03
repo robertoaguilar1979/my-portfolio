@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -552,13 +553,14 @@ li .li-fab {
 /************* my work ************************/
 .myWork {
 
-    background: url(../img/key-board.jpg);
+    /* background: url(../img/key-board.jpg); */
     background-position: center;
     background-size: cover;
     background-color: var(--grey);
     background-repeat: no-repeat;
     background-blend-mode: multiply;
     margin-top: 0;
+    margin-bottom: 0;
 
 }
 
@@ -589,4 +591,76 @@ li .li-fab {
     justify-items: center;
 }
 
-/* footer */
+@media(max-width:945px) {
+    .h1-myWork {
+        font-size: var(--h2);
+        line-height: 1.4;
+    }
+}
+
+/************************** footer ********************/
+footer {
+    background-color: var(--black);
+    padding: 2.75em;
+}
+
+.footer p {
+    color: var(--white);
+    margin: 0;
+    text-align: center;
+    font-weight: 700;
+    word-spacing: .15rem;
+    letter-spacing: .10rem;
+
+}
+
+.footer p i {
+    margin-left: .5em;
+}
+
+.footer p a {
+    text-decoration: none;
+    color: var(--black);
+    background-color: var(--teal);
+    padding: .5em 1.5em;
+    display: inline-block;
+    margin-top: 1.75em;
+    margin-left: 1em;
+}
+
+.footer p a:hover {
+    background-color: var(--white);
+
+}
+
+.social-media {
+    margin-top: 1.75em;
+    text-align: center;
+}
+
+.social-media i {
+    font-size: 1.5rem;
+    margin-left: 1.3em;
+    color: var(--teal);
+    text-align: center;
+}
+
+.social-media i:hover {
+    background-color: transparent;
+    color: var(--white);
+}
+
+/**************Up button *******************/
+
+.upScroll {
+    background-color: var(--teal);
+    border: none;
+    padding: .75em;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    cursor: pointer;
+
+}
