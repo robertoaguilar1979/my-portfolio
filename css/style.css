@@ -662,5 +662,39 @@ footer {
     bottom: 30px;
     right: 20px;
     cursor: pointer;
+    z-index: 9999;
+    display: none;
+}
 
+.visible {
+    display: block;
+    animation: fadeIn 2s;
+
+
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@media (max-width:945px) {
+    .upScroll {
+        padding: .55em;
+    }
 }
