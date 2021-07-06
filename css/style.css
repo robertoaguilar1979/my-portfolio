@@ -669,8 +669,6 @@ footer {
 .visible {
     display: block;
     animation: fadeIn 2s;
-
-
 }
 
 @keyframes fadeIn {
