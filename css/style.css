@@ -103,6 +103,7 @@ img {
 .nav-bar {
     display: flex;
     justify-content: space-between;
+    max-width: 950px;
 }
 
 .logo-link {
