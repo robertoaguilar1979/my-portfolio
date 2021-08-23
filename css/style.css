@@ -528,6 +528,13 @@ li .li-fab {
     max-width: 550px;
 }
 
+@media(max-width:1050px) {
+    .karenAndMe {
+        position: static;
+        margin-top: 2em;
+    }
+}
+
 @media(max-width:945px) {
     .who-am-i {
         margin-top: 0;
@@ -585,16 +592,85 @@ li .li-fab {
 
 }
 
-.myWork-img {
+.myWork-images {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     justify-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.flip-card {
+    background: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: rgb(133, 133, 133);
+    color: var(--black);
+}
+
+.flip-card-back {
+    background-color: #fff;
+    color: var(--white);
+    transform: rotateY(180deg);
+
+}
+
+.flip-card-back h2 {
+    margin: 1.5em;
+    font-size: var(--h4);
+    color: var(--black);
+    font-weight: 700;
+}
+
+.flip-card-back p {
+    font-size: 1.1rem;
+    margin: 1.5em;
+    color: rgba(0, 0, 0, .6);
 }
 
 @media(max-width:945px) {
+    .myWork {
+        padding: 1em;
+    }
+
     .h1-myWork {
         font-size: var(--h2);
         line-height: 1.4;
+    }
+
+    .myWork-images {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .flip-card {
+        margin-bottom: 1.75em;
     }
 }
 
@@ -669,6 +745,7 @@ footer {
 .visible {
     display: block;
     animation: fadeIn 2s;
+
 }
 
 @keyframes fadeIn {
