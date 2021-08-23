@@ -2,18 +2,18 @@ const openButton = document.querySelector(".nav-open");
 const closeButton = document.querySelector(".nav-close");
 const navigation = document.querySelector(".nav");
 
-const about = document.querySelector(".nav-item2");
-const contact = document.querySelector(".nav-item3");
+const list = document.querySelectorAll(".nav-item");
 
 const upArrow = document.querySelector(".upScroll");
 
-about.addEventListener("click", () => {
-    navigation.classList.toggle("open");
-})
-contact.addEventListener("click", () => {
-    navigation.classList.toggle("open");
-})
 
+
+
+for (let i = 0; i < list.length; i++) {
+    list[i].addEventListener("click", () => {
+        navigation.classList.remove("open");
+    })
+}
 
 openButton.addEventListener("click", () => {
     navigation.classList.add("open");
