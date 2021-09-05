@@ -75,7 +75,9 @@ img {
     max-width: 100%;
 }
 
-
+.shadow {
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, .3);
+}
 
 /*================= header area ==================*/
 
@@ -252,10 +254,6 @@ img {
         font-size: .60rem;
     }
 
-    .hero-section {
-        padding: 2em;
-    }
-
     header {
         text-align: center;
     }
@@ -297,7 +295,7 @@ section {
 
 .color-background h3 {
     text-align: right;
-    padding-right: .5em;
+    padding-right: 1.5em;
     text-transform: uppercase;
     font-weight: 400;
 }
@@ -315,13 +313,83 @@ section {
 .hero-img {
     position: absolute;
     bottom: 0;
-    left: -25px;
-    width: 300px;
-    margin-left: 4.5em;
     z-index: 1;
-    border-radius: 50%;
-    box-shadow: 10px 10px 25px rgba(0, 0, 0, .3);
-    max-width: 100%;
+
+}
+
+svg {
+    width: 400px;
+    display: block;
+}
+
+.html {
+    z-index: 2;
+    animation: floatingXRightHtml 10s infinite linear alternate-reverse;
+    position: absolute;
+    left: -250px;
+}
+
+.css {
+    z-index: 3;
+    animation: floatingXLeftCss 18s infinite ease-in-out alternate-reverse;
+    position: absolute;
+}
+
+.javascript {
+    z-index: 4;
+    animation: floatingXRightJavascript 5s infinite ease-in-out alternate-reverse;
+    position: absolute;
+}
+
+@keyframes floatingXRightHtml {
+
+    0% {
+        transform: translate(50px, 0px);
+    }
+
+    65% {
+        transform: translate(0, 0);
+
+    }
+
+    100% {
+        transform: translate(-45px, 0px);
+
+    }
+}
+
+@keyframes floatingXRightJavascript {
+
+    0% {
+        transform: translate(-45px, 0px);
+    }
+
+    65% {
+        transform: translate(0, 0);
+
+    }
+
+    100% {
+        transform: translate(30px, 0px);
+
+    }
+}
+
+@keyframes floatingXLeftCss {
+
+    0% {
+        transform: translate(0, 0px);
+    }
+
+    65% {
+        transform: translate(60px, 0);
+
+    }
+
+    100% {
+        transform: translate(-45px, 0px);
+
+    }
 }
 
 @media (max-width:1050px) {
@@ -374,15 +442,33 @@ section {
     .hero-img {
         order: 4;
         position: relative;
-        margin-left: 0;
-        left: 0;
-        display: block;
-        object-fit: cover;
-        max-width: 100%;
         margin-top: 2em;
-        min-width: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
 
 
+}
+
+@media (max-width:500px) {
+    svg {
+        width: 375px;
+        display: block;
+    }
+
+    .hero {
+        padding: 0px;
+    }
+
+    .hero-section {
+        padding: 0px;
+    }
+
+    .hero>h1 {
+        line-height: 1.05;
     }
 }
 
