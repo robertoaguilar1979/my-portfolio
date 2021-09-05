@@ -347,10 +347,6 @@ svg {
         transform: translate(50px, 0px);
     }
 
-    65% {
-        transform: translate(0, 0);
-
-    }
 
     100% {
         transform: translate(-45px, 0px);
@@ -455,7 +451,7 @@ svg {
 
 @media (max-width:500px) {
     svg {
-        width: 375px;
+        width: 355px;
         display: block;
     }
 
@@ -599,6 +595,8 @@ li .li-fab {
     font-size: 1.9rem;
     padding: .25em .75em;
     text-transform: none;
+    background-color: var(--dark-green);
+    color: var(--white);
 
 }
 
@@ -606,18 +604,143 @@ li .li-fab {
     position: absolute;
     top: 70px;
     left: 570px;
-    box-shadow: 10px 10px 25px rgba(0, 0, 0, .6);
 
+}
+
+.karenAndMe svg {
+    width: 550px;
 }
 
 .paragraph-container {
     max-width: 550px;
 }
 
+#plant {
+    animation: plantXDirection 1500ms infinite linear alternate;
+    transform-origin: bottom;
+}
+
+@keyframes plantXDirection {
+    0% {
+        transform: rotate(-.05deg);
+    }
+
+    100% {
+        transform: rotate(1deg);
+    }
+}
+
+#Vector_24 {
+    animation: code 1s infinite alternate-reverse linear;
+}
+
+#Vector_25 {
+    animation: code2 2s infinite alternate-reverse ease-in-out;
+}
+
+#Vector_26 {
+    animation: code2 3s infinite alternate-reverse ease;
+}
+
+#Vector_27 {
+    animation: code 4s infinite alternate-reverse ease-out;
+}
+
+#Vector_28 {
+    animation: code2 5s infinite alternate-reverse ease-in;
+}
+
+#Vector_29 {
+    animation: code 6s infinite alternate-reverse ease-in-out;
+}
+
+#Vector_14 {
+    animation: code2 7s infinite alternate-reverse linear;
+}
+
+#Vector_15 {
+    animation: code 4s infinite alternate-reverse ease-in-out;
+}
+
+#Vector_16 {
+    animation: code 9s infinite alternate-reverse 5s linear;
+}
+
+#Vector_17 {
+    animation: code 2s infinite 2s alternate-reverse ease-in-out;
+}
+
+#Vector_18 {
+    animation: code2 11s infinite alternate-reverse linear;
+}
+
+#Vector_19 {
+    animation: code 2s infinite alternate-reverse ease-in-out;
+}
+
+#Vector_20 {
+    animation: code2 13s infinite alternate-reverse linear;
+}
+
+@keyframes code {
+
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.05);
+    }
+
+}
+
+@keyframes color {
+    0% {
+        background-color: blue;
+    }
+
+    100% {
+        background-color: yellow;
+    }
+}
+
+@keyframes code2 {
+
+    0% {
+        transform: translate(5px, 0px);
+    }
+
+
+    100% {
+        transform: translate(-5px, 0px);
+
+    }
+}
+
 @media(max-width:1050px) {
     .karenAndMe {
         position: static;
         margin-top: 2em;
+    }
+
+    .color-background .who-h3 {
+        background-color: var(--teal);
+        color: var(--black);
+
+    }
+}
+
+@media(max-width:1300px) {
+    .karenAndMe svg {
+        width: 420px;
+    }
+
+    .paragraph-container {
+        border: ;
+    }
+
+    .karenAndMe {
+        left: 520px;
     }
 }
 
@@ -640,6 +763,12 @@ li .li-fab {
 
     .who-h1 {
         font-size: var(--h2);
+    }
+}
+
+@media(max-width:400px) {
+    .karenAndMe svg {
+        width: 350px;
     }
 }
 
