@@ -268,7 +268,12 @@ section {
     margin-left: auto;
     margin-right: auto;
     padding: 4em;
-    margin-top: 6em;
+    padding-top: 6em;
+    padding-bottom: 6em;
+}
+
+.hero-section {
+    margin-top: 4em;
     margin-bottom: 6em;
 }
 
@@ -278,7 +283,7 @@ section {
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    /* min-width: 850px; */
+
 
 }
 
@@ -392,6 +397,8 @@ svg {
     .hero-section {
         margin-top: 1em;
         margin-bottom: 1.5em;
+        margin-top: 2em;
+        margin-bottom: 2em;
     }
 
     .hero {
@@ -460,7 +467,8 @@ svg {
     }
 
     .hero-section {
-        padding: 0px;
+        padding: .75em;
+
     }
 
     .hero>h1 {
@@ -551,7 +559,7 @@ li .li-fab {
 @media (max-width:945px) {
     .my-experience {
         padding: .50em;
-        margin-top: 1.5em;
+        padding-top: 1.5em;
         margin-bottom: 0;
     }
 
@@ -581,7 +589,7 @@ li .li-fab {
 /****************** who am I  section**************************/
 .who-am-i {
     position: relative;
-    padding-top: 0;
+    padding-top: 2;
     margin-top: 0;
     margin-bottom: 1em;
 }
