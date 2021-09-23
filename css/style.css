@@ -878,7 +878,7 @@ li .li-fab {
     color: rgba(0, 0, 0, .6);
 }
 
-@media(max-width:945px) {
+@media(max-width:1100px) {
     .myWork {
         padding: 1em;
     }
@@ -897,6 +897,7 @@ li .li-fab {
         margin-bottom: 1.75em;
     }
 }
+
 
 /************************** footer section********************/
 footer {
