@@ -854,7 +854,7 @@ li .li-fab {
 }
 
 .flip-card-front {
-    background-color: rgb(133, 133, 133);
+    /* background-color: rgb(133, 133, 133); */
     color: var(--black);
 }
 
