@@ -51,8 +51,8 @@ gsap.from("#la, .paragraph-container, .who-h1", {
         scrub: 1,
     }
 
-
 });
+
 gsap.from(".karenAndMe", {
     xPercent: 40,
     delay: 0.5,
@@ -67,7 +67,6 @@ gsap.from(".karenAndMe", {
         // markers: true,
         scrub: 1,
     }
-
 
 });
 
